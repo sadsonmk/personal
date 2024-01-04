@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Tetris game
+
+    </title>
+
+    <style>
+        #score {
+            display: inline-block;
+        }
+        
+        div {
+            font-size: 30px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;
+        }
+        
+        .container {
+            border: 2px solid blue;
+            display: flex;
+            justify-content: center;
+            background-image: url(./images/foot.jpg);
+            opacity: 0.9;
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1 class="container">Play Tetris</h1>
+    <div>
+        <ul style="list-style-type: none;">
+            <li>Press the left arrow to move to the left</li>
+            <li>Use the right arrow to move to the right</li>
+            <li>Use the up arrow to rotate</li>
+            <li>use the down arrow to move down</li>
+        </ul>
+    </div>
+    <div class="container">
+        <canvas id="tetris" width="200" height="400"></canvas>
+    </div>
+    <br>
+    <div>
+        Score:
+        <div id="score">0</div>
+
+    </div>
+
+    <script type='module' src="tetris.js"></script>
+    <script type='module' src="tetrominoes.js"></script>
+
+
+</body>
+
+</html>

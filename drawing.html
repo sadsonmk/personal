@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./drawing.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <title>Vibrancy Drawing App</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="field">
+        <div>
+            <h1 style="text-align: center; color: white;">Vibrancy Drawing App</h1>
+        </div>
+        <div class="canv">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="tools">
+            <button onclick="undo_last()" type="button" class="button">Undo</button>
+            <button onclick="clear_canvas()" type="button" class="button">Clear</button>
+
+            <div onclick="change_color(this)" class="color-field" style="background: red;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: orange;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: green;"></div>
+
+            <input oninput="draw_color  = this.value" type="color" class="color-picker">
+            <input type="range" min="1" max="100" class="pen-range" oninput="draw_width = this.value">
+
+
+        </div>
+
+    </div>
+
+</body>
+
+<script src="./drawing.js"></script>
+
+</html>
